@@ -33,6 +33,14 @@ public class PlayerController : MonoBehaviour
         winTextObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(new Vector3(0f, 300f, 0f));
+        }
+    }
+
     private void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
