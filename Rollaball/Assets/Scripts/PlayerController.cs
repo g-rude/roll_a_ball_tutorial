@@ -47,9 +47,13 @@ public class PlayerController : MonoBehaviour
         // invert controls at point level
         if (count >= 5)
         {
-            movementX = -movementVector.x;
-            movementY = -movementVector.y;
+            movementX *= -1;
+            movementY *= -1;
         }
+
+        // player boost
+        
+
     }
 
     void SetCountText()
@@ -76,10 +80,6 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count++;
-            if (count >= 5)
-            {
-                
-            }
             SetCountText();
         }
        
