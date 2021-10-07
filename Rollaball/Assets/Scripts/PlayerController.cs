@@ -52,7 +52,11 @@ public class PlayerController : MonoBehaviour
         }
 
         // player boost
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            movementX *= 5;
+            movementY *= 5;
+        }
 
     }
 
