@@ -60,7 +60,6 @@ public class PlayerController : MonoBehaviour
     // boost
     void OnBoost()
     {
-        Debug.Log("working");
         movementX *= 5;
         movementY *= 5;
     }
