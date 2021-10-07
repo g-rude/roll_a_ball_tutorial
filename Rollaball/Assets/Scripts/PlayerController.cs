@@ -51,15 +51,22 @@ public class PlayerController : MonoBehaviour
             movementY *= -1;
         }
 
-        // player boost
-        if (Input.GetKey(KeyCode.Space))
-        {
-            movementX *= 5;
-            movementY *= 5;
-        }
+        
 
     }
 
+
+
+    // boost
+    void OnBoost()
+    {
+        Debug.Log("working");
+        movementX *= 5;
+        movementY *= 5;
+    }
+
+
+    
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
